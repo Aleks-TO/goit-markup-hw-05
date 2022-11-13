@@ -71,7 +71,7 @@
             Ефективні рішення для<br />
             вашого бізнесу
           </h1>
-          <button type="button" class="hero-btn">Замовити послугу</button>
+          <button type="button" class="hero-btn" data-modal-open>Замовити послугу</button>
           <!-- <a href="">Замовити послугу</a> -->
         </div>
       </section>
@@ -127,12 +127,15 @@
           <h2 class="work-title">Чим ми займаємося</h2>
           <ul class="work-list list">
             <li class="work-item">
+              <p class="work-text">Десктопні додатки</p>
               <img src="./images/img1-1.jpg" alt="печатаю за комп'ютером" width="370" height="294" />
             </li>
             <li class="work-item">
+              <p class="work-text">Мобільні додатки</p>
               <img src="./images/img1-2.jpg" alt="обираю макет на ноутбуці" width="370" height="294" />
             </li>
             <li class="work-item">
+              <p class="work-text">Дизайнерські рішення</p>
               <img src="./images/img1-3.jpg" alt="обираю колір для макету" width="370" height="294" />
             </li>
           </ul>
@@ -523,5 +526,16 @@
         </div>
       </div>
     </footer>
+    <!-- -----MODAL WINDOW----- -->
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg class="modal-icon-close" width="" height="">
+            <use href="./images/icons/icons.svg#close-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./JS/"></script>
   </body>
 </html>
