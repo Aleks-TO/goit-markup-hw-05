@@ -96,6 +96,10 @@ body {
   display: inline-block;
   padding: 32px 0;
   color: var(--primary-text);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link.current::after {
   content: '';
@@ -138,6 +142,10 @@ body {
   padding-bottom: 32px;
 
   color: #757575;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .authoriz-mail:focus,
 .authoriz-mail:hover,
@@ -350,6 +358,10 @@ body {
 
   border-radius: 50%;
   color: var(--bg-icon-color);
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-icon {
   fill: currentColor;
@@ -406,6 +418,10 @@ body {
   border-radius: 4px;
   cursor: pointer;
   color: var(--bg-icon-color);
+
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   fill: currentColor;
@@ -506,10 +522,14 @@ footer .team-social-link {
   border-color: transparent;
   border-radius: 4px;
   cursor: pointer;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
-  background: var(--bg-btn-active);
+  background-color: var(--bg-btn-active);
   color: var(--light-text);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -527,6 +547,10 @@ footer .team-social-link {
 .portfolio-item {
   background: #ffffff;
   width: 370px;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -566,6 +590,10 @@ footer .team-social-link {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover .overlay-text {
   transform: translateY(0%);
@@ -599,6 +627,8 @@ footer .team-social-link {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  animation: modal-animation 6000ms;
 }
 .modal-btn {
   position: absolute;
@@ -617,4 +647,16 @@ footer .team-social-link {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+/* ------ANIMATION----- */
+@keyframes modal-animation {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
